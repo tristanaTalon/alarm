@@ -48,11 +48,15 @@ export class AlarmListComponent implements OnInit {
   }
 
   delete($event: AlarmResponse) {
-    console.log($event);
+    // console.log($event);
     if ($event.done()) {
       this.alarmList.delete($event.alarm().id());
     }
   }
 
-  update($event: AlarmResponse) {}
+  update($event: AlarmResponse) {
+    if ($event.done()) {
+      this.alarmList.update($event.alarm());
+    }
+  }
 }

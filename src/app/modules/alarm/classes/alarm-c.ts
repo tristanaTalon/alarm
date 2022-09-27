@@ -1,12 +1,13 @@
 import { TimeC } from './time-c';
 import { WeekC } from './week-c';
+import { cloneDeepWith } from 'lodash';
 
 export class AlarmC {
-  private idA!: number;
+  idA!: number;
 
-  private weekA!: WeekC;
+  weekA!: WeekC;
 
-  private timeA!: TimeC;
+  timeA!: TimeC;
 
   constructor(week: WeekC = new WeekC(), time: TimeC = new TimeC()) {
     this.idA = -1;
@@ -40,6 +41,10 @@ export class AlarmC {
   }
 
   public static cloned(alarm: AlarmC): AlarmC {
-    return JSON.parse(JSON.stringify(alarm))
+    // const cloned = JSON.parse(JSON.stringify(alarm));
+    // Object.setPrototypeOf(cloned, Object.getPrototypeOf(alarm));
+    return cloneDeepWith(alarm);
+
+    // return cloned
   }
 }
