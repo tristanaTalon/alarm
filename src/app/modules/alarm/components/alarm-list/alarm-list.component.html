@@ -1,0 +1,14 @@
+<button color="primary" (click)="add()">nuevo</button>
+<section *ngFor="let alarm of alarmList.alarmList()">
+  <app-alarm
+    [alarm]="alarm"
+    (deleteO)="delete($event)"
+    (updateO)="update($event)"
+  ></app-alarm>
+</section>
+<button (click)="show()">mostrar</button>
+<!-- <app-alarm
+[alarm]="alarmTest"
+(deleteO)="delete($event)"
+deleteO="update($event)"
+></app-alarm> -->
