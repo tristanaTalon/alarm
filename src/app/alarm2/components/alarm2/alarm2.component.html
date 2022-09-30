@@ -1,0 +1,21 @@
+<div class="alarm">
+  <div class="top">
+    <app-time2 [time]="alarm.getTime()" [disabled]="disabled"></app-time2>
+
+    <section class="configuration-buttons">
+      <button
+        mat-mini-fab
+        color="primary"
+        aria-label="delete"
+        (click)="update()"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-mini-fab color="warn" aria-label="delete" (click)="delete()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </section>
+  </div>
+
+  <app-week2 [week]="alarm.getWeek()" [disabled]="disabled"></app-week2>
+</div>

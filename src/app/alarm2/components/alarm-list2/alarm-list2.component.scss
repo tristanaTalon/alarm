@@ -1,0 +1,28 @@
+.alarm-list {
+  width: 400px;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  // background-color: rgb(246, 234, 234);
+}
+
+.title {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  // margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  margin: 0 1rem;
+  width: 100%;
+}
+
+button {
+  width: calc(100% - 2rem);
+}
+
+.alarm {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}

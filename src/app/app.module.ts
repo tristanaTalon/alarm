@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
-import { AlarmTestModule } from './test/alarm-test/alarm-test.module';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,8 +13,8 @@ import { AlarmTestModule } from './test/alarm-test/alarm-test.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule,
-    AlarmTestModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],

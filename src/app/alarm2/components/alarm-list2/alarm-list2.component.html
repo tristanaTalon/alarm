@@ -1,0 +1,21 @@
+<div class="alarm-list">
+  <div class="title">List of schedules</div>
+
+  <div class="buttons">
+    <button mat-stroked-button color="primary" class="add" (click)="add()">
+      Add new schedule
+    </button>
+  </div>
+
+  <mat-card
+    class="alarm mat-elevation-z4"
+    *ngFor="let alarm of alarmListAux.getAlarmList()"
+  >
+    <app-alarm2
+      [alarm]="alarm"
+      [disabled]="true"
+      (updateO)="update($event)"
+      (deleteO)="delete($event)"
+    ></app-alarm2>
+  </mat-card>
+</div>

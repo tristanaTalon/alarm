@@ -1,0 +1,42 @@
+// TIME UNIT
+.time-unit-content {
+  width: 3.5rem;
+}
+
+.time-unit .mat-form-field-label {
+  width: 100% !important;
+}
+
+.time-unit .mat-form-field-wrapper {
+  padding: 0;
+}
+
+.time-unit .mat-select-value,
+.time-unit .mat-form-field-infix {
+  text-align: center;
+}
+
+.time-unit .mat-select-arrow {
+  display: none;
+}
+
+.time-unit-select mat-option {
+  padding: 0;
+  text-align: center;
+}
+
+// TIME
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.space {
+  margin: 0 0.7rem;
+}
+
+.colon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

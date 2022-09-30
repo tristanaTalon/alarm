@@ -1,0 +1,29 @@
+.alarm {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  margin-bottom: 1rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.create-update .top {
+  display: flex;
+  justify-content: center;
+}
+
+.configuration-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+

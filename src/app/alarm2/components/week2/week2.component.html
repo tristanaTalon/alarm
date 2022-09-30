@@ -1,0 +1,15 @@
+<div class="week2">
+  <div class="week">
+    <mat-chip-list selectable multiple [disabled]="disabled">
+      <mat-chip
+        #chip="matChip"
+        *ngFor="let day of daysInEnglish; let i = index"
+        [value]="day"
+        (click)="toggleSelection(chip, i)"
+        [selected]="isSelected(i)"
+      >
+        {{ day }}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+</div>

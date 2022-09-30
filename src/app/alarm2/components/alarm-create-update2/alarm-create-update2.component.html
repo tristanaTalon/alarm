@@ -1,0 +1,23 @@
+<div mat-dialog class="alarm-create-update">
+  <div mat-dialog-title class="header">
+    {{ title }}
+    <button mat-icon-button color="warn" aria-label="Close" (click)="cancel()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div class="alarm">
+    <div class="time">
+      <app-time2 [time]="alarmAux.getTime()"></app-time2>
+    </div>
+
+    <app-week2 [week]="alarmAux.getWeek()"></app-week2>
+  </div>
+
+  <div mat-dialog-actions class="buttons">
+    <button mat-stroked-button color="accent" (click)="cancel()">Cancel</button>
+    <button mat-stroked-button color="primary" (click)="accept()">
+      Accept
+    </button>
+  </div>
+</div>

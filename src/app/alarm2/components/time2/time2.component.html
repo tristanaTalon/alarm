@@ -1,0 +1,67 @@
+<div class="time2">
+  <div class="time">
+    <div class="time-unit">
+      <mat-form-field appearance="outline" class="time-unit-content">
+        <mat-label>h</mat-label>
+        <mat-select
+          [value]="time.getHour()"
+          (valueChange)="changedHour($event)"
+          panelClass="time-unit-select"
+          panelClass="time-unit-select"
+          disableOptionCentering="true"
+          [disabled]="disabled"
+        >
+          <mat-option
+            [value]="option"
+            *ngFor="let option of time.generatedHours()"
+            >{{ option }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <section class="space">
+      <p class="colon">:</p>
+    </section>
+
+    <div class="time-unit">
+      <mat-form-field appearance="outline" class="time-unit-content">
+        <mat-label>min</mat-label>
+        <mat-select
+          [value]="time.getMinute()"
+          (valueChange)="changedMinute($event)"
+          panelClass="time-unit-select"
+          disableOptionCentering="true"
+          [disabled]="disabled"
+        >
+          <mat-option
+            [value]="option"
+            *ngFor="let option of time.generatedMinutes()"
+            >{{ option }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <section class="space"></section>
+
+    <div class="time-unit">
+      <mat-form-field appearance="outline" class="time-unit-content">
+        <mat-label>a</mat-label>
+        <mat-select
+          [value]="time.getMeridiam()"
+          panelClass="time-unit-select"
+          (valueChange)="changedMeridiam($event)"
+          disableOptionCentering="true"
+          [disabled]="disabled"
+        >
+          <mat-option
+            [value]="option"
+            *ngFor="let option of time.generatedMeridiams()"
+            >{{ option }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
