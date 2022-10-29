@@ -1,0 +1,11 @@
+.item-order {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.item-order .columns .mat-form-field-wrapper,
+.item-order .directions .mat-form-field-wrapper {
+  padding: 0;
+}

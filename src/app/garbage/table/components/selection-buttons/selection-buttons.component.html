@@ -1,0 +1,12 @@
+<div class="buttons" *ngIf="enabled()">
+  <app-button-alone
+    [button]="getButtonStart()"
+    [class]="'start'"
+    (clickedO)="show()"
+  ></app-button-alone>
+  <app-button-alone
+    [button]="getButtonEnd()"
+    [class]="'end'"
+    (clickedO)="remove()"
+  ></app-button-alone>
+</div>

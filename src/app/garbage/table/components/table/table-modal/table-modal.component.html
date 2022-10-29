@@ -1,0 +1,21 @@
+<div mat-dialog>
+  <div mat-dialog-title class="header">
+    <h2>Selecteds</h2>
+    <button mat-icon-button color="warn" aria-label="Close" (click)="cancel()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="content">
+    <app-table
+      [table]="tablePack.table"
+      [triggerUpdateComponent]="triggerUpdateTable"
+      (sortEventO)="sortEvent($event)"
+    ></app-table>
+    <app-paginator
+      [paginator]="tablePack.paginator"
+      (pageEventO)="pageEvent($event)"
+    ></app-paginator>
+  </div>
+</div>
+
+<!-- <button (click)="show()">show</button> -->

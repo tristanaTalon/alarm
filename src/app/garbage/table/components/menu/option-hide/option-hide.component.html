@@ -1,0 +1,19 @@
+<app-option [option]="option" (shouldChangeO)="shouldChange($event)">
+  <mat-selection-list [multiple]="true" content>
+    <mat-list-option
+      *ngFor="let field of fields"
+      color="primary"
+      [selected]="field.visible"
+      (selectedChange)="change($event, field)"
+    >
+      <div class="field-content">
+        <mat-icon *ngIf="field?.icon" color="primary">
+          {{ field?.icon }}
+        </mat-icon>
+        <p class="alias"> 
+          {{ field.alias }}
+        </p>
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</app-option>

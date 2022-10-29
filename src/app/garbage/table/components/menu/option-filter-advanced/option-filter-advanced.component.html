@@ -1,0 +1,27 @@
+<div class="option-filter-advanced">
+  <div class="mng">
+    <button mat-stroked-button color="primary" (click)="addNewFilter()">
+      Add new filter
+    </button>
+    <button mat-stroked-button color="warn" (click)="removeAllFilters()">
+      Remove all filters
+    </button>
+  </div>
+  <div class="content">
+    <app-item-filter-advanced
+      *ngFor="let itemFilter of itemFilters"
+      [itemFilter]="itemFilter"
+      (removedO)="removeFilter($event)"
+      (changedColumnO)="changedColumn($event)"
+      (changedValuesO)="changedValues($event)"
+    ></app-item-filter-advanced>
+    <!-- <app-item-filter-values></app-item-filter-values> -->
+  </div>
+  <div class="navigation">
+    <button mat-stroked-button color="primary" (click)="changeToFastFilter()">
+      Change to fast filter
+    </button>
+  </div>
+</div>
+
+<!-- <button (click)="show()">show</button> -->

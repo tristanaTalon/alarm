@@ -1,0 +1,11 @@
+<form class="item-filter-fast" [formGroup]="form">
+  <div class="title">{{ itemFilter.itemFilterColumn.selected }}</div>
+  <mat-selection-list formControlName="values" class="list" [color]="'primary'">
+    <mat-list-option
+      *ngFor="let value of itemFilter.itemFilterValues.values"
+      [value]="value"
+    >
+      {{ value }}
+    </mat-list-option>
+  </mat-selection-list>
+</form>

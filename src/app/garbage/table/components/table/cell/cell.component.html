@@ -1,0 +1,33 @@
+<div *ngIf="isCronogram(cell)" class="set-height-progress-bar">
+  <app-progress-bar [dateRange]="cell"></app-progress-bar>
+</div>
+
+<p *ngIf="isNormal(cell)">
+  {{ cell }}
+</p>
+
+<div *ngIf="isProgress(cell)" class="set-height-progress-bar">
+  <app-progress-bar [dateRange]="cell"></app-progress-bar>
+</div>
+
+<div *ngIf="isSelection(cell)" class="set-height-progress-bar">
+  <mat-checkbox
+    (change)="changed($event, cell)"
+    [checked]="cell"
+    color="primary"
+  >
+  </mat-checkbox>
+</div>
+
+<div *ngIf="isDraggedAndDropped(cell)" class="set-width-dragged-and-dropped">
+  <button
+    mat-icon-button
+    color="primary"
+    aria-label="Example icon button with a heart icon"
+    cdkDragHandle
+    (mouseenter)="enter()"
+    (mouseleave)="leave()"
+  >
+    <mat-icon><span class="material-icons"> drag_handle </span></mat-icon>
+  </button>
+</div>

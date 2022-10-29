@@ -1,0 +1,16 @@
+<div #container class="container">
+  <button #leftTopRef class="left-top">LeftTop</button>
+  <button #rightTopRef class="right-top">RightTop</button>
+  <button #midRef class="mid">Mid</button>
+  <button class="left-bot">LeftBot</button>
+  <button class="right-bot">RightBot</button>
+</div>
+<button (click)="show()">Show</button>
+<ng-template #tooltipTemplate>
+  <div>
+    <h3>Este contenido está siendo pasado desde un template</h3>
+    <p>Lorem ipsum dolor sit amet</p>
+    <p>consectetur adipiscing elit</p>
+    <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+  </div>
+</ng-template>

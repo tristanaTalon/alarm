@@ -1,0 +1,41 @@
+<form class="item-filter-advanced" [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Column</mat-label>
+    <mat-select formControlName="column" disableOptionCentering>
+      <mat-option
+        *ngFor="let column of itemFilter.itemFilterColumn.columns"
+        [value]="column"
+      >
+        {{ column }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Values</mat-label>
+    <mat-select
+      multiple
+      formControlName="values"
+      placeholder="{{ getPlaceholderOfValues() }}"
+      disableOptionCentering
+      (openedChange)="openedChange($event)"
+    >
+      <mat-option
+        *ngFor="let value of itemFilter.itemFilterValues.values"
+        [value]="value"
+      >
+        {{ value }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button
+    *ngIf="existColumn()"
+    mat-icon-button
+    color="warn"
+    aria-label="Remove filter"
+    (click)="remove()"
+  >
+    <mat-icon>delete</mat-icon>
+  </button>
+</form>
+
+<!-- <button (click)="show()">show</button> -->

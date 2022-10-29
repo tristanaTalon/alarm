@@ -1,0 +1,24 @@
+<button
+  mat-flat-button
+  color="primary"
+  aria-label="button.ariaLabel"
+  (click)="clicked()"
+  [matTooltip]="button.tooltip"
+  [ngClass]="getClass()"
+  *ngIf="isActivated()"
+>
+  <mat-icon> {{ button.icon }} </mat-icon>
+  {{ button.content + " " + messageWhenIsActivated() }}
+</button>
+<button
+  mat-stroked-button
+  color="primary"
+  aria-label="button.ariaLabel"
+  (click)="clicked()"
+  [matTooltip]="button.tooltip"
+  [ngClass]="class"
+  *ngIf="!isActivated()"
+>
+  <mat-icon> {{ button.icon }} </mat-icon>
+  {{ button.content }}
+</button>

@@ -1,0 +1,26 @@
+<mat-form-field
+  appearance="outline"
+  class="item-filter-values"
+  (click)="select.open()"
+>
+  <mat-label>Values</mat-label>
+  <section class="content" (click)="$event.stopPropagation()">
+    
+    <mat-chip-list #chipList class="chip-list" aria-label="List of values">
+      <mat-chip
+        *ngFor="let selected of itemFilterValues.selecteds"
+        (removed)="remove(selected)"
+      >
+        {{ selected }}
+        <button matChipRemove>
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip>
+    </mat-chip-list>
+    <mat-select class="select" #select>
+      <mat-option *ngFor="let value of itemFilterValues.values" [value]="value">
+        {{ value }}
+      </mat-option>
+    </mat-select>
+  </section>
+</mat-form-field>

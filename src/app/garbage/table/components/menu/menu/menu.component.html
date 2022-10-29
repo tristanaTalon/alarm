@@ -1,0 +1,26 @@
+<section class="menu">
+  <app-option-search
+    *ngIf="menu.configuration.search"
+    (searchO)="search($event)"
+  ></app-option-search>
+  <app-option-filter
+    *ngIf="menu.configuration.filter"
+    [optionFilterFast]="optionFilterFast"
+    [optionFilterAdvanced]="optionFilterAdvanced"
+    [data]="data"
+    (itemFiltersO)="filter($event)"
+  ></app-option-filter>
+  <app-option-order
+    *ngIf="menu.configuration.order"
+    [option]="optionSort"
+    (getFieldsChangesO)="updateFieldByOptionOrder($event)"
+    [triggerUpdateOptionOrder]="triggerOptionOrder"
+  ></app-option-order>
+  <app-option-hide
+    *ngIf="menu.configuration.hide"
+    [option]="optionHide"
+    (getFieldsChangesO)="updateFieldsByOptionHide($event)"
+  ></app-option-hide>
+</section>
+
+<!-- <button (click)="show()">show</button> -->

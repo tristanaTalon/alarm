@@ -1,0 +1,7 @@
+<div class="scales">
+  <p class="description">Less</p>
+  <div class="scales-content" *ngFor="let scale of scales">
+    <div class="scale" [ngStyle]="{ 'background-color': scale.color }"></div>
+  </div>
+  <p class="description">More</p>
+</div>

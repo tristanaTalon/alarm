@@ -1,0 +1,16 @@
+<div class="navigation">
+  <div class="title">Colums</div>
+  <div class="content">
+    <app-item-filter-fast
+      *ngFor="let itemFilter of itemFilters"
+      [itemFilter]="itemFilter"
+      (changedItemFilterO)="changedItemFilter()"
+    >
+    </app-item-filter-fast>
+  </div>
+  <button mat-stroked-button color="primary" (click)="changeToAdvancedFilter()">
+    Change to advanced filter
+  </button>
+</div>
+
+<!-- <button (click)="show()">show</button> -->

@@ -1,0 +1,29 @@
+<div class="page-example">
+  <section class="top">
+    <app-menu
+      [menu]="tablePack.menu"
+      (menuEventO)="menuEvent($event)"
+      [triggerOptionOrder]="triggerOptionOrder"
+      [data]="data"
+      (itemFiltersO)="filterEvent($event)"
+    ></app-menu>
+    <app-selection-buttons
+      [checkedRows]="checkedRows"
+      [tablePack]="tablePackCloned"
+      (removeAllSelectionsO)="removeAllSelections($event)"
+    ></app-selection-buttons>
+  </section>
+  <app-table
+    [table]="tablePack.table"
+    [triggerUpdateComponent]="triggerUpdateTable"
+    (sortEventO)="sortEvent()"
+    (checkedRowsO)="checkedRowsO($event)"
+    [triggerRemoveSelections]="triggerRemoveSelections"
+  ></app-table>
+  <app-paginator
+    [paginator]="tablePack.paginator"
+    (pageEventO)="pageEvent($event)"
+  ></app-paginator>
+</div>
+
+<!-- <button (click)="show()">show</button> -->

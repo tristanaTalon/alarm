@@ -1,0 +1,14 @@
+<div
+  #menuTrigger="matMenuTrigger"
+  [matMenuTriggerFor]="menu"
+  (click)="openMenu()"
+>
+  <app-button-alone [button]="option.button" [class]="class" (clickedO)="clicked()"></app-button-alone>
+</div>
+<mat-menu #menu class="menu-of-option" (close)="closedMenu()">
+  <div (click)="$event.stopPropagation()">
+    <app-canvas [canvas]="option.canvas" (answerCanvasO)="answerCanvas($event)">
+      <ng-content [select]="content"></ng-content>
+    </app-canvas>
+  </div>
+</mat-menu>

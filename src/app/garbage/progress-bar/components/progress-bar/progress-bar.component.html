@@ -1,0 +1,28 @@
+<section
+  class="container-mat-progress-bar"
+  (mouseover)="over()"
+  (mouseout)="out()"
+>
+  <mat-progress-bar
+    class="custom-mat-progress-bar"
+    [mode]="'determinate'"
+    [value]="dateRange.porcentProgressUntilNow()"
+  >
+  </mat-progress-bar>
+  <p class="dates-range" *ngIf="!isMouseInCompontet">
+    {{ dateRange.formated() }}
+  </p>
+  <p class="dates-range" *ngIf="isMouseInCompontet">
+    {{ roundedPorcentProgress() + "%" }}
+  </p>
+</section>
+
+<!-- <section class="buttons">
+  <button mat-raised-button (click)="show()">Show</button>
+  <button mat-raised-button (click)="porcentUntilNow()">
+    Porcent until now
+  </button>
+  <button mat-raised-button (click)="cloneAndIgnoreTime()">
+    Clone and ignore time
+  </button>
+</section> -->

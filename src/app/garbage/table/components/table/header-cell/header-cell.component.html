@@ -1,0 +1,20 @@
+<p *ngIf="isNormal(headerCell)">
+  {{ headerCell }}
+</p>
+
+<div *ngIf="isSelection(headerCell)" class="set-height-progress-bar">
+  <mat-checkbox
+    (change)="change($event)"
+    color="primary"
+    [checked]="allComplete"
+    [indeterminate]="indeterminated"
+    >
+  </mat-checkbox>
+  <!-- <button (click)="show()">Show</button> -->
+</div>
+
+<div *ngIf="isDraggedAndDropped(headerCell)" class="set-width-dragged-and-dropped">
+  <span class="material-icons"> drag_handle </span>
+</div>
+
+<!-- <button (click)="show()">show</button> -->

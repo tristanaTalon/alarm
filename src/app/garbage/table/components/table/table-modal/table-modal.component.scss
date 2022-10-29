@@ -1,0 +1,95 @@
+$color-strong: rgba(0, 0, 0, 0.12);
+$color-strong-light: rgba(0, 0, 0, 0.08);
+$color-weak: rgba(0, 0, 0, 0.03);
+$border: 1px solid $color-strong;
+$border-radius: 20px;
+
+.table-c {
+  width: 100%;
+  border-radius: 10px;
+  border: $border;
+}
+
+.table-c th {
+  font-size: 14px;
+}
+
+.table-c th,
+.table-c td {
+  padding: 0 !important;
+  text-align: center !important;
+  border-right: $border;
+}
+
+.table-c th .mat-sort-header-container {
+  justify-content: center;
+}
+
+.table-c tr:last-child td {
+  border-bottom: none;
+}
+
+.table-c tr:last-child td:first-child {
+  border-bottom-left-radius: $border-radius;
+}
+
+.table-c tr:last-child td:last-child {
+  border-bottom-right-radius: $border-radius;
+}
+
+.table-c th:first-child {
+  border-top-left-radius: $border-radius;
+}
+
+.table-c th:last-child {
+  border-top-right-radius: $border-radius;
+}
+
+.table-c th:last-child,
+.table-c tr td:last-child {
+  border-right: none;
+}
+
+.table-c .hover:hover {
+  background-color: $color-weak;
+}
+
+.table-c .selected {
+  background-color: $color-strong;
+}
+
+.table-c .set-height-progress-bar {
+  height: 1rem;
+}
+
+.table-c td,
+.table-c th {
+  padding: 0 0.5rem !important;
+}
+
+.selected {
+  background-color: $color-strong !important;
+}
+
+.table-c .mat-sort-header-container {
+  border-bottom: none !important;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin-bottom: 1rem;
+}

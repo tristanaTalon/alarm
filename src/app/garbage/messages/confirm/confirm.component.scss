@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}

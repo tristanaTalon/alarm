@@ -1,0 +1,9 @@
+.menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.menu:last-child {
+  margin-right: 1rem;
+}

@@ -15,6 +15,10 @@ import { Router } from '@angular/router';
 export class AppComponent {
   options: OptionI[] = [
     {
+      name: 'Progress Bar',
+      url: '/progress-bar',
+    },
+    {
       name: 'Alarm',
       url: '/alarm',
     },
@@ -25,6 +29,18 @@ export class AppComponent {
     {
       name: 'Git Calendar',
       url: '/git-calendar',
+    },
+    {
+      name: 'Git Calendar2',
+      url: '/git-calendar2',
+    },
+    {
+      name: 'Table',
+      url: '/table',
+    },
+    {
+      name: 'Tooltip',
+      url: '/tooltip',
     },
   ];
 
@@ -37,6 +53,6 @@ export class AppComponent {
 
   activated(url: string): string {
     console.log();
-    return String(url== this.router.url);
+    return String(url == this.router.url);
   }
 }

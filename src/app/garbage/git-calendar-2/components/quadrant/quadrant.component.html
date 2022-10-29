@@ -1,0 +1,38 @@
+<div class="quadrant">
+  <div class="quadrant-content">
+    <div *ngFor="let y of getValuesOfYAxis()" class="row">
+      <div *ngFor="let x of getValuesOfXAxis()">
+        <!-- Vaquo -->
+        <div *ngIf="x === 0 && y === quadrant.yAxis.size + 1">
+          <!-- just insertir because need to ident all the column -->
+          <app-label [label]="getLabelOfYAxis(y)" [axis]="'y'"></app-label>
+        </div>
+        <!-- Label of y axis -->
+        <div *ngIf="x === 0 && y !== quadrant.yAxis.size + 1">
+          <app-label [label]="getLabelOfYAxis(y)" [axis]="'y'"></app-label>
+        </div>
+        <div *ngIf="x !== 0">
+          <!-- Label of x axis -->
+          <div *ngIf="y === 0" class="labels-x-axis">
+            <!-- <app-box></app-box> -->
+            <app-label [label]="getLabelOfXAxis(x)" [axis]="'x'"></app-label>
+          </div>
+
+          <!-- x labels positioned in bottom *ngIf="y !== quadrant.yAxis.size + 1" -->
+          <!-- x labels positioned in top *ngIf="y !== 0" -->
+          <app-box
+            *ngIf="y !== 0"
+            [box]="getBox(x, y)"
+            [scales]="quadrant.scales"
+          ></app-box>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div></div> -->
+
+  <div class="scales">
+    <app-scales [scales]="quadrant.scales"></app-scales>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<app-option [option]="option" (shouldChangeO)="shouldChange($event)">
+  <button
+    class="add-new-order"
+    mat-stroked-button
+    color="primary"
+    (click)="newItemOrder()"
+    *ngIf="itemOrders.length == 0"
+  >
+    Add new Order
+  </button>
+  <app-item-order
+    *ngFor="let itemOrder of itemOrders"
+    [itemOrder]="itemOrder"
+    (removedItemOrder)="removeItemOrder($event)"
+    (updateItemOrder)="updateItemOrder($event)"
+  ></app-item-order>
+</app-option>
+
+<!-- <button (click)="show()">show</button> -->

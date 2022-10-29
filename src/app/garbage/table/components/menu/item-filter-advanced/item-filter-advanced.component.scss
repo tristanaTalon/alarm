@@ -1,0 +1,9 @@
+.item-filter-advanced {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  .mat-form-field-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,39 @@
+.container-mat-progress-bar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.custom-mat-progress-bar {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
+.container-mat-progress-bar .mat-progress-bar {
+  height: inherit;
+}
+
+.container-mat-progress-bar .mat-progress-bar-primary::after {
+  background-color: lightgreen;
+}
+
+.container-mat-progress-bar .mat-progress-bar .mat-progress-bar-element {
+  background-color: rgb(112, 112, 104);
+}
+
+.container-mat-progress-bar .dates-range {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+}
+
+.buttons {
+  display: flex;
+}

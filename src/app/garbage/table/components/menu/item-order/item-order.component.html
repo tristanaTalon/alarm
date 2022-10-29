@@ -1,0 +1,29 @@
+<form class="item-order" [formGroup]="orderForm">
+  <div class="columns">
+    <mat-form-field appearance="outline">
+      <mat-label>Column</mat-label>
+      <mat-select disableOptionCentering="true" formControlName="active">
+        <mat-option [value]="column" *ngFor="let column of itemOrder.columns">
+          {{ column }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="directions">
+    <mat-form-field appearance="outline">
+      <mat-label>Direction</mat-label>
+      <mat-select disableOptionCentering="true" formControlName="direction">
+        <mat-option
+          [value]="direction.key.length == 0 ? null : direction.key"
+          *ngFor="let direction of directions"
+          >{{ direction.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="buttons">
+    <button mat-icon-button color="warn" aria-label="Delete" (click)="remove()" >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</form>

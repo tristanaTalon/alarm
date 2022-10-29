@@ -1,0 +1,54 @@
+<mat-progress-bar *ngIf="table.isLoading" mode="query"></mat-progress-bar>
+<section class="own-container">
+  <table
+    mat-table
+    [dataSource]="table.dataSource"
+    class="table-c"
+    cdkDropList
+    (cdkDropListDropped)="draggedAndDropped($event)"
+    matSort
+    (matSortChange)="sortEvent($event)"
+    [matSortActive]="this.getSort().active"
+    [matSortDirection]="this.getSort().direction"
+  >
+    <ng-container
+      [matColumnDef]="metaDataField.name"
+      *ngFor="let metaDataField of table.metaDataFields"
+    >
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header
+        [disabled]="isSortedDisabled(metaDataField.name)"
+      >
+        <app-header-cell
+          [headerCell]="metaDataField.alias"
+          [dataSource]="table.dataSource"
+          [checkedFromChildCheck]="checkedFromChild"
+          (checked)="clickHeaderCheck($event)"
+        ></app-header-cell>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <app-cell
+          [cell]="row[metaDataField.name]"
+          [row]="row"
+          (cdkDragDisabledO)="cdkDragDisabledO($event)"
+          (checked)="clickRowCheck($event)"
+        ></app-cell>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="fields; sticky: true"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: fields"
+      class="hover"
+      cdkDrag
+      [cdkDragDisabled]="cdkDragDisabled"
+      cdkDragLockAxis="y"
+      cdkDragPreviewContainer="parent"
+      [ngClass]="{ selected: isSelected(row) }"
+    ></tr>
+  </table>
+</section>
+
+<!-- <button (click)="show()">Show</button> -->

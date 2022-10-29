@@ -1,0 +1,38 @@
+<button
+  mat-stroked-button
+  color="primary"
+  aria-label="search"
+  matBadgeSize="medium"
+  *ngIf="isVisibleButton()"
+  (click)="focusInput()"
+>
+  <mat-icon> search </mat-icon>
+  Search
+</button>
+<mat-form-field
+  appearance="outline"
+  class="search-input"
+  *ngIf="isVisibleInput()"
+>
+  <mat-label>Search</mat-label>
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="search"
+    autocomplete="off"
+    (blur)="unfocusInput()"
+    (click)="focusInput()"
+    appAutofocus
+    (keyup)="changeSearch()"
+  />
+  <button
+    matSuffix
+    mat-icon-button
+    aria-label="Delete search string"
+    color="warn"
+    *ngIf="isVisibleRemoveButton()"
+    (click)="resetSearch()"
+  >
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-form-field>

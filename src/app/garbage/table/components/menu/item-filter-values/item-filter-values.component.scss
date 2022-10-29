@@ -1,0 +1,29 @@
+.item-filter-values {
+  width: 25rem;
+}
+
+.item-filter-values .content {
+  display: flex;
+  gap: 1rem;
+}
+
+.item-filter-values .content .chip-list {
+  width: 13rem;
+}
+
+.item-filter-values .content .select {
+  width: auto;
+}
+
+// .item-filter-values .content .select .mat-select-value {
+//   // display: none;
+// }
+
+div.mat-chip-list-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  .mat-chip {
+    flex: 0 0 auto;
+  }
+}

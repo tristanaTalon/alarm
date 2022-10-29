@@ -1,0 +1,40 @@
+<div class="buttons">
+  <app-option
+    [option]="optionFilterFast"
+    [class]="'start'"
+    (menuTriggerO)="setMenuTriggerOptionFast($event)"
+    (shouldChangeO)="shouldChangeFilter($event)"
+    (clickedO)="openedFromOut()"
+  >
+    <app-option-filter-fast
+      [option]="optionFilterFast"
+      [data]="data"
+      (changeToAdvancedFilterO)="changeToOptionAdvanced()"
+      (changeItemFiltersO)="changeItemFiltersCommonFromItemFilterFast($event)"
+      [itemFiltersCommon]="itemFiltersCommon"
+      [amountOfChangesFromAdvanced]="amountOfChangesFromAdvanced"
+    ></app-option-filter-fast>
+  </app-option>
+  <app-option 
+    [option]="optionFilterAdvanced"
+    [class]="'end'"
+    (menuTriggerO)="setMenuTriggerOptionAdvanced($event)"
+    (shouldChangeO)="shouldChangeFilter($event)"
+    (clickedO)="openedFromOut()"
+  >
+    <app-option-filter-advanced
+      [option]="optionFilterAdvanced"
+      [data]="data"
+      (changeToFastFilterO)="changeToOptionFast()"
+      (changeItemFiltersO)="
+        changeItemFiltersCommonFromItemFilterAdvanced($event)
+      "
+      [itemFiltersCommon]="itemFiltersCommon"
+      [amountOfChangesFromFast]="amountOfChangesFromFast"
+    ></app-option-filter-advanced>
+  </app-option>
+</div>
+
+<!-- <button (click)="show()">show</button> -->
+<!-- <button (click)="changeToOptionAdvanced()">Change</button> -->
+<!-- <button (click)="changeToOptionFast()">Change</button> -->

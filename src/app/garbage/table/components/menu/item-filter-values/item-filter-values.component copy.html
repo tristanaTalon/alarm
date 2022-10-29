@@ -1,0 +1,59 @@
+<!-- <mat-form-field
+  class="example-chip-list"
+  appearance="outline"
+  (click)="openAutocomplete()"
+>
+  <mat-label>Values</mat-label>
+  <mat-chip-list #chipList aria-label="Fruit selection">
+    <input
+      placeholder="New filter..."
+      [formControl]="valueControl"
+      [matAutocomplete]="auto"
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)"
+      (click)="openAutocomplete()"
+    />
+    <mat-chip
+      *ngFor="let selected of itemFilterValues.selecteds"
+      (removed)="remove(selected)"
+    >
+      {{ selected }}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip>
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="select($event)">
+    <mat-option *ngFor="let value of filteredValues" [value]="value">
+      {{ value }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field> -->
+
+<mat-form-field
+  class="example-chip-list"
+  appearance="outline"
+  (click)="openAutocomplete()"
+>
+  <mat-label>Values</mat-label>
+  <mat-chip-list #chipList aria-label="Fruit selection">
+    <input
+      placeholder="New filter..."
+      [formControl]="valueControl"
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)"
+      (click)="openAutocomplete()"
+    />
+    <mat-chip
+      *ngFor="let selected of itemFilterValues.selecteds"
+      (removed)="remove(selected)"
+    >
+      {{ selected }}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip>
+  </mat-chip-list>
+</mat-form-field>

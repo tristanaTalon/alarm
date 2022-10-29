@@ -1,0 +1,185 @@
+﻿{
+    "Url": "www.epdata.es/nombres-masculinos-mas-frecuentes-espana-2020/3a3d9ad0-573c-4fdc-b4a2-ab1a09887468",
+    "Respuesta": {
+        "Id": "3a3d9ad0-573c-4fdc-b4a2-ab1a09887468",
+        "Url": "www.epdata.es/nombres-masculinos-mas-frecuentes-espana-2020/3a3d9ad0-573c-4fdc-b4a2-ab1a09887468",
+        "Titulo": "Nombres masculinos más frecuentes en España en 2021",
+        "Subtitulo": "",
+        "Datos": {
+            "Metricas": [
+                {
+                    "Id": 0,
+                    "Nombre": "Frecuencia",
+                    "SonDatosNumericos": true,
+                    "Fuente": "INE",
+                    "Clasificacion": null,
+                    "Unidad": "Personas ",
+                    "Escala": "Unidades",
+                    "EscalaFactorPotencia10": 0,
+                    "Datos": [
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Alejandro",
+                            "Valor": 265562,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Antonio",
+                            "Valor": 640854,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Carlos",
+                            "Valor": 276918,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Daniel",
+                            "Valor": 302864,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "David",
+                            "Valor": 369633,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Francisco",
+                            "Valor": 467933,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Francisco Javier",
+                            "Valor": 285853,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Javier",
+                            "Valor": 308465,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Jesus",
+                            "Valor": 268791,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Jose",
+                            "Valor": 547142,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Jose Antonio",
+                            "Valor": 303446,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Jose Luis",
+                            "Valor": 285096,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Jose Manuel",
+                            "Valor": 239213,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Juan",
+                            "Valor": 325791,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Manuel",
+                            "Valor": 562798,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Miguel",
+                            "Valor": 240406,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Miguel Angel",
+                            "Valor": 227786,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Pablo",
+                            "Valor": 222590,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Pedro",
+                            "Valor": 214374,
+                            "Estado": null,
+                            "Notas": null
+                        },
+                        {
+                            "Agno": 2021,
+                            "Periodo": "Año",
+                            "Parametro": "Rafael",
+                            "Valor": 228320,
+                            "Estado": null,
+                            "Notas": null
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
