@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <section class="left">
+    <app-button
+      *ngFor="let option of leftOptions"
+      [button]="option"
+      (clickO)="navigate($event)"
+    ></app-button>
+  </section>
+  <section class="right">
+    <app-button
+      *ngFor="let option of rightOptions"
+      [button]="option"
+      (clickO)="navigate($event)"
+    ></app-button>
+  </section>
+</mat-toolbar>

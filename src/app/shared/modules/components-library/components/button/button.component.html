@@ -1,0 +1,50 @@
+<button
+  *ngIf="isRequiredType('')"
+  mat-button
+  [color]="getColor()"
+  class="option-id-mylib"
+  [ngClass]="{ actived: isActived() }"
+  [disabled]="isDisabled()"
+  (click)="click()"
+>
+  <mat-icon [svgIcon]="getSvgIcon()">{{ getIcon() }}</mat-icon>
+  <span>{{ getName() }}</span>
+</button>
+<button
+  *ngIf="isRequiredType('raised')"
+  mat-raised-button
+  [color]="getColor()"
+  class="option-id-mylib"
+  [ngClass]="{ actived: isActived() }"
+  [disabled]="isDisabled()"
+  (click)="click()"
+>
+  <mat-icon [svgIcon]="getSvgIcon()">{{ getIcon() }}</mat-icon>
+  <span>{{ getName() }}</span>
+</button>
+<button
+  *ngIf="isRequiredType('stroked')"
+  mat-stroked-button
+  [color]="getColor()"
+  class="option-id-mylib"
+  [ngClass]="{ actived: isActived() }"
+  [disabled]="isDisabled()"
+  (click)="click()"
+>
+  <mat-icon [svgIcon]="getSvgIcon()">{{ getIcon() }}</mat-icon>
+  <span>{{ getName() }}</span>
+</button>
+<button
+  *ngIf="isRequiredType('flat')"
+  mat-flat-button
+  [color]="getColor()"
+  class="option-id-mylib"
+  [ngClass]="{ actived: isActived() }"
+  [disabled]="isDisabled()"
+  (click)="click()"
+>
+  <mat-icon [svgIcon]="getSvgIcon()">{{ getIcon() }}</mat-icon>
+  <span>{{ getName() }}</span>
+</button>
+
+<!-- // hacer el active -->

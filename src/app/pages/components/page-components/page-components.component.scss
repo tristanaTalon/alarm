@@ -1,0 +1,6 @@
+$height-core-menu: 4rem;
+
+.page-components {
+  width: 100%;
+  height: calc(100% - $height-core-menu);
+}
